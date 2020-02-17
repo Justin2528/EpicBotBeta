@@ -70,10 +70,10 @@ let status = ["Shrek Beta", "Prefix: epic~"]
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
 
-    setInterval(() => {
-        dbl.postStats(client.guilds.size);
-      console.log(`Posted ${client.guilds.size} to DBL!`)
-    }, 900000);
+    // setInterval(() => {
+    // //     dbl.postStats(client.guilds.size);
+    // //   console.log(`Posted ${client.guilds.size} to DBL!`)
+    // // }, 900000); // not for use because this will legit break it
 
 setInterval(function() {
   let stats = status[Math.floor(Math.random()*status.length)];
