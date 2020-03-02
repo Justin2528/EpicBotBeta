@@ -1,7 +1,7 @@
 module.exports = {
     name: "stats",
     category: "info",
-    description: "tell my online time",
+    description: "tell my stats time",
  
     run: async (client, message, args,ops) => {
 const { version } = require("discord.js");

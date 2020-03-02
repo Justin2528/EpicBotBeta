@@ -1,6 +1,7 @@
 ![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
 # NEWS
-### rename UPTIME command to STATS with epic stats 20/2/2020 BETA
+### NEW reboot COMAMND also it's useless to know this because only me to use ok bye 2/3/2020
+##### rename UPTIME command to STATS with epic stats 20/2/2020 BETA
 ##### **Not that kinda important** YOU MUST VOTE TO USE epic>hypixel AND epic>pit 12/2/2020
 ##### NEW COMMAND removewarn 10/2/2020
 ##### ADDED LEVEL BAR AND SOME OTHER FEATURES TO epic>hypixel COMMAND 6/2/2020
