@@ -68,7 +68,7 @@ config({
 });
 let status = ["Shrek Beta", "Prefix: epic~"]
 client.on("ready", () => {
-    console.log(`Hi, ${client.user.username} is now online!`);
+    console.log(`Hi, ${client.user.username} is now online! and ${client.guilds.size} servers`);
 
     // setInterval(() => {
     // //     dbl.postStats(client.guilds.size);
@@ -91,6 +91,38 @@ setInterval(function() {
     });
 });
 
+client.on("guildCreate", guild => {
+    console.log("Joined a new guild: " + guild.name);
+    //Your other stuff like adding to guildArray
+   let channelID;
+    let channels = guild.channels;
+    channelLoop:
+    for (let c of channels) {
+        let channelType = c[1].type;
+        if (channelType === "text") {
+            channelID = c[0];
+            break channelLoop;
+        }
+    }
+  const ok = new RichEmbed()
+.setColor("GREEN")
+  .setDescription("**Thanks for inviting me into this server!**")
+  .setFooter(client.user.username,client.user.displayAvatarURL)
+  .addField("**My prefix:**", " **`epic~`**")
+  .addField("**You can see a list of commands by typing** ", "**`epic~help`**")
+  .addField("**Have an epic day!**")
+  .setTitle("**Hey!**")
+  .setThumbnail("https://cdn.discordapp.com/attachments/672418900721401908/684400892237053958/2184_wumpus_color_gif.gif");
+
+    let channel = client.channels.get(guild.systemChannelID || channelID);
+    channel.send(ok);
+})
+
+//removed from a server
+client.on("guildDelete", guild => {
+    console.log("Left a guild: " + guild.name);
+    //remove from guildArray
+})
 client.on("message", async message => {
    if (message.author.bot) return;   
 if (message.isMentioned(client.user)) message.reply("my prefix is **`epic~`**! Help Command: **`epic~help`**").then(m => m.delete(4000))
