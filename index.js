@@ -143,7 +143,7 @@ let embedwarn = new RichEmbed()
 .setFooter("Sad", message.author.displayAvatarURL);
  
 
-if(message.channel.type === "dm") return message.channel.send(embedwarn).then(m => m.delete(5000));
+ if(message.channel.type === "dm") return;
  
     if (!message.guild) return;
    const guildconf = client.settings.ensure(message.guild.id, dsettings);
